@@ -1,0 +1,19 @@
+.burgernav {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 600;
+}
+
+#navbarToggleExternalContent {
+    height: 100vh;
+}
+
+#usersTable {
+    position: fixed;
+    top: 55px;
+}
+
+h4.text-white{
+    border-bottom: 1px solid white;
+}
