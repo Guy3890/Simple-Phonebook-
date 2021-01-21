@@ -1,3 +1,4 @@
+
 .burgernav {
     position: fixed;
     width: 100%;
@@ -12,8 +13,55 @@
 #usersTable {
     position: fixed;
     top: 55px;
+    
 }
 
 h4.text-white{
     border-bottom: 1px solid white;
 }
+
+.scroll-container {
+    height: 90vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+
+@media
+only screen and (max-width: 590px) {
+    
+      
+    table {
+        position: relative
+    }
+  table, thead, tbody, th, td, tr {
+    display: block;
+    margin: 0 auto;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr { border: 1px solid #ccc; }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 200px;
+    margin-left: 150px;
+    
+  }
+  td:before {
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    width: 100%;
+    padding-right: 40px;
+    white-space: nowrap;
+    margin-left: -150px;
+  }
+  td:nth-of-type(1):before { content: "Name"; }
+  td:nth-of-type(2):before { content: "Address"; }
+  td:nth-of-type(3):before { content: "Phone"; }
+ }
+ 
