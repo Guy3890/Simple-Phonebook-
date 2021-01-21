@@ -1,22 +1,13 @@
+// fetch api
 function getUsers() {
-    $.ajax({
-        url: 'https://jsonplaceholder.typicode.com/users',
-        dataType: 'json',
-        success: function(data) {
-        data.forEach(function (row) {
-         insertRow(row)
-    });
-}});
-
-    // fetch api
-    //fetch('https://jsonplaceholder.typicode.com/users')
-    //     .then(response => response.json())
-    //     .then(function (data) {
-    //         //build row for each index
-    //         data.forEach(function (row) {
-    //             insertRow(row)
-    //         });
-    //     });
+   fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(function (data) {
+            //build row for each index
+            data.forEach(function (row) {
+                insertRow(row)
+            });
+        });
 }
 
 function insertRow(row) {
